@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Subscribe to a cool new product</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://js.stripe.com/clover/stripe.js"></script>
+  </head>
+  <body>
+    <section>
+      <div class="product">
+        <div class="description">
+          <h3>怪しい情報商材</h3>
+          <h5>2,000円 / 月</h5>
+        </div>
+      </div>
+      <form action="/create-checkout-session" method="POST">
+        <!-- Add a hidden field with the lookup_key of your Price -->
+        <input type="hidden" name="lookup_key" value="suspicious" />
+        <button id="checkout-and-portal-button" type="submit">購読</button>
+      </form>
+    </section>
+    <section>
+      <div class="product">
+        <div class="description">
+          <h3>すごく怪しい情報商材</h3>
+          <h5>10,000円 / 月</h5>
+        </div>
+      </div>
+      <form action="/create-checkout-session" method="POST">
+        <!-- Add a hidden field with the lookup_key of your Price -->
+        <input type="hidden" name="lookup_key" value="super_suspicious" />
+        <button id="checkout-and-portal-button" type="submit">購読</button>
+      </form>
+    </section>
+  </body>
+</html>
